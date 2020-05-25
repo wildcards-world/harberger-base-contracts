@@ -48,6 +48,12 @@ module.exports = {
       network_id: "*", // Any network (default: none)
       gasPrice: 1000000000, // 1 gwei
     },
+    testCi: {
+      host: "ganache",
+      port: 8545,
+      network_id: "*",
+      gasPrice: 1000000000,
+    },
   },
   mocha: {
     reporter: "eth-gas-reporter",

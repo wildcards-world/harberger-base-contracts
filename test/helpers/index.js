@@ -2,10 +2,10 @@ const { BN } = require("@openzeppelin/test-helpers");
 
 const NUM_SECONDS_IN_YEAR = "31536000";
 
-const STEWARD_CONTRACT_NAME = "./WildcardSteward_v2.sol";
-const ERC721_CONTRACT_NAME = "./ERC721Patronage_v1.sol";
-const ERC20_CONTRACT_NAME = "./ERC20PatronageReceipt_v2.sol";
-const MINT_MANAGER_CONTRACT_NAME = "./MintManager_v2.sol";
+const STEWARD_CONTRACT_NAME = "./HarbergerSteward.sol";
+const ERC721_CONTRACT_NAME = "./ERC721Patronage.sol";
+const ERC20_CONTRACT_NAME = "./ERC20PatronageReceipt.sol";
+const MINT_MANAGER_CONTRACT_NAME = "./MintManager.sol";
 const SENT_ATTACKER_CONTRACT_NAME = "./tests/SendBlockAttacker.sol";
 
 // NOTE:: This was inspired by this question and the off by one second errors I was getting:

@@ -1,0 +1,32 @@
+name: Run contract tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  container-job:
+    runs-on: ubuntu-latest
+
+    container:
+      image: wildcardsworld/contract-tester:0.0
+
+    services:
+      ganache:
+        image: "trufflesuite/ganache-cli:v6.9.1"
+        ports:
+          - 8545:8545
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: app
+      - run: yarn
+        working-directory: ./app
+      - run: yarn run test-ci
+        working-directory: ./app

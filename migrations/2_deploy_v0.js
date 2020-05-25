@@ -26,7 +26,7 @@ async function deploy(options, accounts) {
 module.exports = function(deployer, networkName, accounts) {
   deployer.then(async () => {
     // Don't try to deploy/migrate the contracts for tests
-    if (networkName === "test") {
+    if (networkName === "test" || networkName === "testCi") {
       return;
     }
     const { network, txParams } = await ConfigManager.initNetworkConfiguration({

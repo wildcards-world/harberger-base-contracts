@@ -1,4 +1,4 @@
-const {
+ {
   BN,
   expectRevert,
   ether,

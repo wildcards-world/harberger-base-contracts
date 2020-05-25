@@ -10,7 +10,7 @@ const image1MetadataJson = {
 
   // https://ipfs.infura.io/ipfs/QmZt5S8tD7L4nMBo4NTtVDpV3qpteA1DXJwKRmuF318tHd"
   ipfs: "QmZt5S8tD7L4nMBo4NTtVDpV3qpteA1DXJwKRmuF318tHd",
-  type: "Gorilla"
+  type: "Gorilla",
 };
 const image1MetadataString = JSON.stringify(image1MetadataJson);
 const image2MetadataJson = {
@@ -18,14 +18,14 @@ const image2MetadataJson = {
   name: "Andy",
   // https://ipfs.infura.io/ipfs/QmUjnwmYQE1QjkNpoEdpGwbj1s4cj5gVfEePNPnArbm5Tv
   ipfs: "QmUjnwmYQE1QjkNpoEdpGwbj1s4cj5gVfEePNPnArbm5Tv",
-  type: "Gorilla"
+  type: "Gorilla",
 };
 const image2MetadataString = JSON.stringify(image2MetadataJson);
 
 module.exports = function(deployer, networkName, accounts) {
   deployer.then(async () => {
     // Don't try to deploy/migrate the contracts for tests
-    if (networkName === "test") {
+    if (networkName === "test" || networkName === "testCi") {
       return;
     }
 
@@ -45,7 +45,7 @@ module.exports = function(deployer, networkName, accounts) {
         1,
         image2MetadataString,
         { from: accounts[0] }
-      )
+      ),
     ]);
     await steward.initialize(
       patronageToken.address,
