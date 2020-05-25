@@ -1,0 +1,18 @@
+{
+  "manifestVersion": "2.2",
+  "name": "wildcards-contracts",
+  "version": "0.1.0",
+  "contracts": {
+    "ERC721Patronage": "ERC721Patronage_v1",
+    "WildcardSteward": "WildcardSteward_v2",
+    "MintManager": "MintManager_v2"
+  },
+  "dependencies": {},
+  "compiler": {
+    "manager": "openzeppelin",
+    "solcVersion": "0.5.12",
+    "compilerSettings": {
+      "optimizer": {}
+    }
+  }
+}

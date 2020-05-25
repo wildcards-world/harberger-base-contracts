@@ -1,0 +1,36 @@
+{
+  "name": "harberger-tax-contracts",
+  "version": "2.5.3",
+  "description": "Harberger tax base contracts, a good starting point for any project using harberger tax.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "migrate": "truffle migrate",
+    "compile": "truffle compile",
+    "compile-buidler": "npx buidler compile",
+    "test": "truffle test --network test",
+    "test-buidler": "npx buidler test",
+    "check": "truffle exec index.js --network local",
+    "deploy": "npx truffle exec scripts/deploy.js"
+  },
+  "author": "jason@wildcards.worldh",
+  "license": "MIT",
+  "dependencies": {
+    "@openzeppelin/contracts": "^2.5.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.2.3",
+    "@openzeppelin/upgrades": "^2.5.3",
+    "@truffle/hdwallet-provider": "^1.0.33",
+    "web3": "^1.2.7"
+  },
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.3.0",
+    "@nomiclabs/buidler-truffle5": "^1.3.0",
+    "@nomiclabs/buidler-web3": "^1.3.0",
+    "@openzeppelin/cli": "^2.8.0",
+    "@openzeppelin/test-helpers": "^0.5.1",
+    "chai": "^4.2.0",
+    "eth-gas-reporter": "^0.2.12",
+    "solidity-coverage": "^0.7.0-beta.2",
+    "truffle": "^5.0.38"
+  }
+}
