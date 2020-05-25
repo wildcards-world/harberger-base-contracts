@@ -63,8 +63,7 @@ contract("WildcardSteward owed", (accounts) => {
     await erc20.renounceMinter({ from: accounts[0] });
 
     // TODO: use this to make the contract address of the token deturministic: https://ethereum.stackexchange.com/a/46960/4642
-    await steward.initialize(erc721.address, accounts[0]);
-    await steward.updateToV2(mintManager.address, [], []);
+    await steward.initialize(erc721.address, accounts[0], mintManager.address);
     await steward.listNewTokens(
       [testToken1.id, testToken2.id],
       [accounts[0], accounts[0]],
@@ -201,15 +200,6 @@ contract("WildcardSteward owed", (accounts) => {
     assert.equal(
       amountOfTreasuryToken.toString(),
       expectedTreasuryToken.toString()
-    );
-  });
-
-  it("steward: loyalty-mint. Checking MintManager cannot be altered after intial set up.", async () => {
-    await waitTillBeginningOfSecond();
-
-    await expectRevert(
-      steward.setMintManager(accounts[5], { from: accounts[5] }),
-      "Only set on initialisation"
     );
   });
 

@@ -102,12 +102,14 @@ contract HarbergerSteward is Initializable {
         _;
     }
 
-    function initialize(address _assetToken, address _admin)
-        public
-        initializer
-    {
-        assetToken = ERC721Patronage(_assetToken);
+    function initialize(
+        ERC721Patronage _assetToken,
+        address _admin,
+        MintManager _mintManager
+    ) public initializer {
+        assetToken = (_assetToken);
         admin = _admin;
+        mintManager = (_mintManager);
     }
 
     // Source: https://github.com/provable-things/ethereum-api/blob/master/oraclizeAPI_0.5.sol#L1045
@@ -166,35 +168,6 @@ contract HarbergerSteward is Initializable {
                 _tokenGenerationRate[i]
             );
         }
-    }
-
-    function addTokenGenerationRateToExistingTokens(
-        uint256[] memory tokens,
-        uint256[] memory _tokenGenerationRate
-    ) internal {
-        assert(tokens.length == _tokenGenerationRate.length);
-        for (uint8 i = 0; i < tokens.length; ++i) {
-            assert(tokenGenerationRate[tokens[i]] == 0);
-
-            tokenGenerationRate[tokens[i]] = _tokenGenerationRate[i];
-        }
-    }
-
-    function setMintManager(address _mintManager) public {
-        require(
-            address(mintManager) == address(0),
-            "Only set on initialisation"
-        ); // This can only be called once!
-        mintManager = MintManager(_mintManager);
-    }
-
-    function updateToV2(
-        address _mintManager,
-        uint256[] memory tokens,
-        uint256[] memory _tokenGenerationRate
-    ) public {
-        setMintManager(_mintManager);
-        addTokenGenerationRateToExistingTokens(tokens, _tokenGenerationRate);
     }
 
     function changeReceivingBenefactor(
