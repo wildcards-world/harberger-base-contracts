@@ -28,7 +28,7 @@ jobs:
           path: app
       - run: yarn
         working-directory: ./app
-      - run: yarn run test-ci
+      - run: yarn run test
         working-directory: ./app
         env:
           BLOCKCHAIN_NODE_HOST: ganache
