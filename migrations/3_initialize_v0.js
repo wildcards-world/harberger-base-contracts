@@ -1,5 +1,5 @@
-const ERC721Patronage_v0 = artifacts.require("ERC721Patronage_v0");
-const WildcardSteward_v0 = artifacts.require("WildcardSteward_v0");
+const ERC721Patronage = artifacts.require("ERC721Patronage");
+const HarbergerSteward = artifacts.require("HarbergerSteward");
 
 const patronageNumerator = 2400000000000;
 const patronageDenominator = 1000000000000;
@@ -29,8 +29,8 @@ module.exports = function(deployer, networkName, accounts) {
       return;
     }
 
-    const patronageToken = await ERC721Patronage_v0.deployed();
-    const steward = await WildcardSteward_v0.deployed();
+    const patronageToken = await ERC721Patronage.deployed();
+    const steward = await HarbergerSteward_v0.deployed();
 
     console.log(await patronageToken.isMinter.call(accounts[0]));
     await Promise.all([

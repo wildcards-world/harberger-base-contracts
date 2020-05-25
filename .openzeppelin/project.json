@@ -5,7 +5,7 @@
   "contracts": {
     "ERC721Patronage": "ERC721Patronage_v1",
     "WildcardSteward": "WildcardSteward_v2",
-    "MintManager": "MintManager_v2"
+    "MintManager": "MintManager"
   },
   "dependencies": {},
   "compiler": {

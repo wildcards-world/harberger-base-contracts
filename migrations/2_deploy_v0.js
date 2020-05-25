@@ -5,15 +5,15 @@ const { add, push, create } = scripts;
 async function deploy(options, accounts) {
   add({
     contractsData: [
-      { name: "ERC721Patronage_v0", alias: "ERC721Patronage" },
-      { name: "WildcardSteward_v0", alias: "WildcardSteward" },
+      { name: "ERC721Patronage", alias: "ERC721Patronage" },
+      { name: "HarbergerSteward", alias: "HarbergerSteward" },
     ],
   });
 
   await push({ ...options, force: true });
 
   const steward = await create(
-    Object.assign({ contractAlias: "WildcardSteward" }, options)
+    Object.assign({ contractAlias: "HarbergerSteward" }, options)
   );
   const patronageToken = await create({
     ...options,

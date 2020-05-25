@@ -9,7 +9,6 @@
     "compile": "truffle compile",
     "compile-buidler": "npx buidler compile",
     "test": "truffle test --network test",
-    "test-ci": "truffle test --network testCi",
     "test-buidler": "npx buidler test",
     "check": "truffle exec index.js --network local",
     "deploy": "npx truffle exec scripts/deploy.js"

@@ -1,4 +1,4 @@
-pragma solidity 0.5.15;
+pragma solidity 0.5.17;
 import "./ERC721Patronage.sol";
 import "./MintManager.sol";
 
@@ -17,7 +17,7 @@ contract HarbergerSteward is Initializable {
     using SafeMath for uint256;
 
     mapping(uint256 => uint256) public price; //in wei
-    ERC721Patronage_v1 public assetToken; // ERC721 NFT.
+    ERC721Patronage public assetToken; // ERC721 NFT.
 
     mapping(uint256 => uint256) public totalCollected; // all patronage ever collected
     mapping(uint256 => uint256) public currentCollected; // amount currently collected for patron
@@ -46,7 +46,7 @@ contract HarbergerSteward is Initializable {
     //////////////// NEW variables in v2///////////////////
     mapping(uint256 => uint256) public tokenGenerationRate; // we can reuse the patronage denominator
 
-    MintManager_v2 public mintManager;
+    MintManager public mintManager;
 
     event Buy(uint256 indexed tokenId, address indexed owner, uint256 price);
     event PriceChange(uint256 indexed tokenId, uint256 newPrice);
@@ -106,7 +106,7 @@ contract HarbergerSteward is Initializable {
         public
         initializer
     {
-        assetToken = ERC721Patronage_v1(_assetToken);
+        assetToken = ERC721Patronage(_assetToken);
         admin = _admin;
     }
 
@@ -185,7 +185,7 @@ contract HarbergerSteward is Initializable {
             address(mintManager) == address(0),
             "Only set on initialisation"
         ); // This can only be called once!
-        mintManager = MintManager_v2(_mintManager);
+        mintManager = MintManager(_mintManager);
     }
 
     function updateToV2(
