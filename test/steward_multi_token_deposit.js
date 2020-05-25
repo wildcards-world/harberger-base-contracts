@@ -86,7 +86,8 @@ contract("WildcardSteward owed", (accounts) => {
     const priceOftoken2 = await steward.price.call(testTokenId2);
 
     // TIME INCREASES HERE BY 10 MIN
-    await time.increase(time.duration.minutes(10));
+    await time.increase(time.duration.minutes(10) - 1);
+    await waitTillBeginningOfSecond();
 
     const patronDepositBeforeSale = await steward.deposit.call(accounts[2]);
     const balancePatronBeforeSale = new BN(
@@ -117,8 +118,8 @@ contract("WildcardSteward owed", (accounts) => {
     );
 
     const expectedPatronageAfter10min = patronageCalculator("600", [
-      { patronageNumerator: "12", price: priceOftoken1.toString() },
-      { patronageNumerator: "12", price: priceOftoken2.toString() },
+      { patronageNumerator: "12000000000000", price: priceOftoken1.toString() },
+      { patronageNumerator: "12000000000000", price: priceOftoken2.toString() },
     ]);
 
     assert.equal(

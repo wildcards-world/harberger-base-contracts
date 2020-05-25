@@ -128,7 +128,8 @@ contract("WildcardSteward owed", (accounts) => {
     /////////////////// TIME = 20 ////////////////////
     //////////////////////////////////////////////////
     //////////////////////////////////////////////////
-    await time.increase(time.duration.minutes(10));
+    await time.increase(time.duration.minutes(10) - 1);
+    await waitTillBeginningOfSecond();
     // await waitTillBeginningOfSecond()
 
     // Buy a 2nd token
@@ -180,7 +181,7 @@ contract("WildcardSteward owed", (accounts) => {
     /////////////////// TIME = 30 ////////////////////
     //////////////////////////////////////////////////
     //////////////////////////////////////////////////
-    await time.increase(time.duration.minutes(10));
+    await time.increase(time.duration.minutes(10) - 1);
     // This adds an extra second to the test, but is needed since this test is long off by one second errors should be avoided.
     await waitTillBeginningOfSecond();
 
@@ -190,7 +191,7 @@ contract("WildcardSteward owed", (accounts) => {
     const patronDepositCalculatedAfter30min = await steward.depositAbleToWithdraw.call(
       accounts[2]
     );
-    const expectedPatronageMulti = patronageCalculator("601", [
+    const expectedPatronageMulti = patronageCalculator("600", [
       {
         patronageNumerator: testToken1.patronageNumerator.toString(),
         price: priceOfToken1.toString(),
@@ -215,7 +216,7 @@ contract("WildcardSteward owed", (accounts) => {
     await steward.withdrawBenefactorFundsTo(accounts[8]);
     const balanceChangePatron1 = await balTrack.delta();
 
-    const expectedTotalPatronageT30Token1 = patronageCalculator("1801", [
+    const expectedTotalPatronageT30Token1 = patronageCalculator("1800", [
       {
         patronageNumerator: testToken1.patronageNumerator.toString(),
         price: priceOfToken1.toString(),
@@ -242,7 +243,7 @@ contract("WildcardSteward owed", (accounts) => {
     await steward.withdrawBenefactorFundsTo(accounts[9]);
     const balanceChangePatron2 = await balTrack2.delta();
 
-    const expectedTotalPatronageT40Token2 = patronageCalculator("1201", [
+    const expectedTotalPatronageT40Token2 = patronageCalculator("1200", [
       {
         patronageNumerator: testToken2.patronageNumerator.toString(),
         price: priceOfToken2.toString(),
