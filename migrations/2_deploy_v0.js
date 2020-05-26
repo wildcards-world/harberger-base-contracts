@@ -15,10 +15,8 @@ async function deploy(options, accounts, erc20PatronageReceipt) {
       { name: "MintManager", alias: "MintManager" },
     ],
   });
-  console.log("1");
 
   await push({ ...options, force: true });
-  console.log("2");
 
   // NOTE: from a security standpoint it isn't ideal that the steward isn't initialized earlier.
   //       unfortunately zeppelinOs/sdk doesn't make it easy to create/get the other contract addresses before they are initialized (but of course it definitely can be done!)
@@ -26,7 +24,6 @@ async function deploy(options, accounts, erc20PatronageReceipt) {
     Object.assign({ contractAlias: "HarbergerSteward" }, options)
   );
 
-  console.log("3");
   const [mintManager, patronageToken] = await Promise.all([
     create(
       Object.assign(

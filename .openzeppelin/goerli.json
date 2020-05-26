@@ -1,0 +1,376 @@
+{
+  "contracts": {
+    "MintManager": {
+      "address": "0x4597f9E925db3842657b9F102c24B71746Ea170B",
+      "constructorCode": "608060405234801561001057600080fd5b50610570806100206000396000f3fe",
+      "bodyBytecodeHash": "b292e443b37d661ba0e7e6d5a35d5141a1d4b5f2a369cb0f2f434d94972a5390",
+      "localBytecodeHash": "e88c08c783812adc6607d8e4c90ccf7ecae97c4e5d156d4130812d44e1328061",
+      "deployedBytecodeHash": "e88c08c783812adc6607d8e4c90ccf7ecae97c4e5d156d4130812d44e1328061",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 5179,
+          "type": "t_bool",
+          "src": "757:24:32"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 5181,
+          "type": "t_bool",
+          "src": "876:25:32"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 5243,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:32"
+        },
+        {
+          "contract": "MintManager",
+          "path": "contracts/MintManager.sol",
+          "label": "admin",
+          "astId": 1909,
+          "type": "t_address",
+          "src": "231:20:4"
+        },
+        {
+          "contract": "MintManager",
+          "path": "contracts/MintManager.sol",
+          "label": "steward",
+          "astId": 1911,
+          "type": "t_address",
+          "src": "257:22:4"
+        },
+        {
+          "contract": "MintManager",
+          "path": "contracts/MintManager.sol",
+          "label": "token",
+          "astId": 1913,
+          "type": "t_address",
+          "src": "285:27:4"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    },
+    "ERC721Patronage": {
+      "address": "0xb81a5F2F6DB29bb577979a6b8025aDFa995041d2",
+      "constructorCode": "60806040526126b5806100136000396000f3fe",
+      "bodyBytecodeHash": "52bf7541c20c9f0953d469a603b5804f2085506265c61f47287a9a17554044bd",
+      "localBytecodeHash": "fcd92741ae8e5816b695811b5194c52961cc77c329f002935f0409b861e7364d",
+      "deployedBytecodeHash": "fcd92741ae8e5816b695811b5194c52961cc77c329f002935f0409b861e7364d",
+      "types": null,
+      "storage": null
+    },
+    "HarbergerSteward": {
+      "address": "0xB69bc2Cc94eD0608872980e8bF1a5722444d8c63",
+      "constructorCode": "608060405234801561001057600080fd5b50612d8a806100206000396000f3fe",
+      "bodyBytecodeHash": "627bc1c8db24f3bca2b1568a492cd97e8cbeee6df3a9df87d5d5b3e481fe464d",
+      "localBytecodeHash": "4039a23d119d0ee965eae07714add99d7c6ed36a507ef4168a2a4afbb3d06a4e",
+      "deployedBytecodeHash": "4039a23d119d0ee965eae07714add99d7c6ed36a507ef4168a2a4afbb3d06a4e",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_mapping<t_uint256>": {
+          "id": "t_mapping<t_uint256>",
+          "valueType": "t_uint256",
+          "label": "mapping(key => uint256)",
+          "kind": "mapping"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        },
+        "t_mapping<t_address>": {
+          "id": "t_mapping<t_address>",
+          "valueType": "t_address",
+          "label": "mapping(key => address)",
+          "kind": "mapping"
+        },
+        "t_mapping<t_bool>": {
+          "id": "t_mapping<t_bool>",
+          "valueType": "t_bool",
+          "label": "mapping(key => bool)",
+          "kind": "mapping"
+        },
+        "t_enum<HarbergerSteward.StewardState>": {
+          "id": "t_enum<HarbergerSteward.StewardState>",
+          "kind": "enum",
+          "label": "HarbergerSteward.StewardState",
+          "members": [
+            "Foreclosed",
+            "Owned"
+          ]
+        },
+        "t_mapping<t_enum<HarbergerSteward.StewardState>>": {
+          "id": "t_mapping<t_enum<HarbergerSteward.StewardState>>",
+          "valueType": "t_enum<HarbergerSteward.StewardState>",
+          "label": "mapping(key => HarbergerSteward.StewardState)",
+          "kind": "mapping"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 5179,
+          "type": "t_bool",
+          "src": "757:24:32"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 5181,
+          "type": "t_bool",
+          "src": "876:25:32"
+        },
+        {
+          "contract": "Initializable",
+          "path": "@openzeppelin/upgrades/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 5243,
+          "type": "t_array:50<t_uint256>",
+          "src": "1982:29:32"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "price",
+          "astId": 129,
+          "type": "t_mapping<t_uint256>",
+          "src": "543:40:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "assetToken",
+          "astId": 131,
+          "type": "t_address",
+          "src": "598:33:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "totalCollected",
+          "astId": 135,
+          "type": "t_mapping<t_uint256>",
+          "src": "653:49:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "currentCollected",
+          "astId": 139,
+          "type": "t_mapping<t_uint256>",
+          "src": "740:51:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "timeLastCollected",
+          "astId": 143,
+          "type": "t_mapping<t_uint256>",
+          "src": "838:52:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "timeLastCollectedPatron",
+          "astId": 147,
+          "type": "t_mapping<t_uint256>",
+          "src": "896:58:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "deposit",
+          "astId": 151,
+          "type": "t_mapping<t_uint256>",
+          "src": "960:42:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "totalPatronOwnedTokenCost",
+          "astId": 155,
+          "type": "t_mapping<t_uint256>",
+          "src": "1008:60:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "benefactors",
+          "astId": 159,
+          "type": "t_mapping<t_address>",
+          "src": "1075:46:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "benefactorFunds",
+          "astId": 163,
+          "type": "t_mapping<t_uint256>",
+          "src": "1152:50:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "currentPatron",
+          "astId": 167,
+          "type": "t_mapping<t_address>",
+          "src": "1209:48:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "patrons",
+          "astId": 173,
+          "type": "t_mapping<t_bool>",
+          "src": "1312:59:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "timeHeld",
+          "astId": 179,
+          "type": "t_mapping<t_uint256>",
+          "src": "1377:63:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "timeAcquired",
+          "astId": 183,
+          "type": "t_mapping<t_uint256>",
+          "src": "1447:47:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "patronageNumerator",
+          "astId": 187,
+          "type": "t_mapping<t_uint256>",
+          "src": "1524:53:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "state",
+          "astId": 194,
+          "type": "t_mapping<t_enum<HarbergerSteward.StewardState>>",
+          "src": "1626:45:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "admin",
+          "astId": 196,
+          "type": "t_address",
+          "src": "1678:20:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "tokenGenerationRate",
+          "astId": 200,
+          "type": "t_mapping<t_uint256>",
+          "src": "1765:54:2"
+        },
+        {
+          "contract": "HarbergerSteward",
+          "path": "contracts/HarbergerSteward.sol",
+          "label": "mintManager",
+          "astId": 202,
+          "type": "t_address",
+          "src": "1868:30:2"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
+    }
+  },
+  "solidityLibs": {},
+  "proxies": {
+    "harberger-tax-contracts/HarbergerSteward": [
+      {
+        "address": "0x4bE0Eab8f41c8109AA134509086Cbcb18b10C0fB",
+        "version": "2.5.3",
+        "implementation": "0xB69bc2Cc94eD0608872980e8bF1a5722444d8c63",
+        "admin": "0x3b15661094481012cff50CC6f9753207130e5e5B",
+        "kind": "Upgradeable"
+      }
+    ],
+    "harberger-tax-contracts/ERC721Patronage": [
+      {
+        "address": "0x48C12e1c5aBC5239FD6e2642C929E8FA8bE29999",
+        "version": "2.5.3",
+        "implementation": "0xb81a5F2F6DB29bb577979a6b8025aDFa995041d2",
+        "admin": "0x3b15661094481012cff50CC6f9753207130e5e5B",
+        "kind": "Upgradeable"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "2.5.3",
+  "proxyAdmin": {
+    "address": "0x3b15661094481012cff50CC6f9753207130e5e5B"
+  }
+}
