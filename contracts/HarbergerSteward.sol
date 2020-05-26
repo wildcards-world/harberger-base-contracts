@@ -153,7 +153,7 @@ contract HarbergerSteward is Initializable {
         for (uint8 i = 0; i < tokens.length; ++i) {
             assert(_benefactors[i] != address(0));
             string memory idString = uintToStr(tokens[i]);
-            string memory tokenUriBase = "https://wildcards.xyz/token/";
+            string memory tokenUriBase = "https://harberger.test.com/token/";
             string memory tokenUri = string(
                 abi.encodePacked(tokenUriBase, idString)
             );

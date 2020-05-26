@@ -6,7 +6,6 @@ import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721Me
 import "@openzeppelin/contracts-ethereum-package/contracts/token/ERC721/ERC721MetadataMintable.sol";
 
 
-// import "./WildcardSteward_v1.sol";
 contract ERC721Patronage is
     Initializable,
     ERC721,
@@ -47,7 +46,7 @@ contract ERC721Patronage is
 
     // function transferFrom(address from, address to, uint256 tokenId) public {
     //     if (msg.sender != steward) {
-    //         WildcardSteward_v1 stewardContract = WildcardSteward_v1(steward);
+    //         HarbergerSteward stewardContract = HarbergerSteward(steward);
 
     //         // Calculate remaining deposit for the two addresses involved in transfer.
     //         stewardContract._collectPatronagePatron(to);

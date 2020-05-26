@@ -1,18 +1,19 @@
 {
   "manifestVersion": "2.2",
-  "name": "wildcards-contracts",
-  "version": "0.1.0",
   "contracts": {
-    "ERC721Patronage": "ERC721Patronage_v1",
-    "WildcardSteward": "WildcardSteward_v2",
+    "ERC721Patronage": "ERC721Patronage",
+    "HarbergerSteward": "HarbergerSteward",
     "MintManager": "MintManager"
   },
   "dependencies": {},
+  "name": "harberger-tax-contracts",
+  "version": "2.5.3",
   "compiler": {
-    "manager": "openzeppelin",
-    "solcVersion": "0.5.12",
     "compilerSettings": {
       "optimizer": {}
+    },
+    "typechain": {
+      "enabled": false
     }
   }
 }
