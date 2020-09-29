@@ -1,5 +1,7 @@
 # Harberger Tax Base Contracts
 
+For more details on how to integrate this see [this article](https://dev.to/wildcards/build-your-first-harberger-tax-app-part-1-3gdd).
+
 ## Disclaimer:
 
 USE THESE CONTRACTS AT YOUR OWN RISK. These are NOT the exact same contracts that are deployed to mainnet by wildcards.world.
